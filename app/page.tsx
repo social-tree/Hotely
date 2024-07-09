@@ -21,13 +21,16 @@ export default async function Index() {
 
   return (
     <div className="flex-1 w-full flex flex-col gap-20 items-center">
-      <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
-        <div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm">
-          <DeployButton />
-          {isSupabaseConnected && <AuthButton />}
+      <div className="items-start px-20 flex justify-center bg-hero-image h-132 w-full bg-cover bg-top">
+        <div className="pt-20 flex gap-2 flex-col max-w-screen-xl justify-between w-full">
+          <h1 className=" font-secondary text-heading-xl w-96 text-white font-bold">
+            Make your travel wishlist, we'll do the rest
+          </h1>
+          <p className="text-paragraph-m font-primary font-medium text-white">
+            Special offers suit your plan
+          </p>
         </div>
-      </nav>
-
+      </div>
       <div className="flex-1 flex flex-col gap-20 max-w-4xl px-3">
         <Header />
         <main className="flex-1 flex flex-col gap-6">
