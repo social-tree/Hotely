@@ -1,5 +1,5 @@
 import { Montserrat, Gothic_A1 } from 'next/font/google'
-import './globals.css'
+import '../globals.css'
 import { PropsWithChildren } from 'react'
 import { Metadata } from 'next'
 
