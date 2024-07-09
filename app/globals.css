@@ -2,26 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 200 20% 98%;
-    --btn-background: 200 10% 91%;
-    --btn-background-hover: 200 10% 89%;
-    --foreground: 200 50% 3%;
+@layer components {
+  .button {
+    @apply flex gap-1 items-center justify-center font-medium text-blackish-green rounded-button-radius whitespace-nowrap focus:outline-none transition-colors duration-300 ease-in-out disabled:text-text-disabled disabled:pointer-events-none;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: 200 50% 3%;
-      --btn-background: 200 10% 9%;
-      --btn-background-hover: 200 10% 12%;
-      --foreground: 200 20% 96%;
-    }
+  .button-primary {
+    @apply button bg-mint-green hover:bg-primary-hover focus:bg-primary-focus focus:outline-dashed focus:outline-primary-focus focus:outline-1 focus:outline-offset-2 active:bg-primary-active disabled:bg-primary-disabled;
   }
-}
 
-@layer base {
-  * {
-    @apply border-foreground/20;
+  .button-secondary {
+    @apply button border border-mint-green bg-transparent hover:border-secondary-hover focus:border-secondary-focus focus:border-2 active:border-blackish-green disabled:border-secondary-disabled;
+  }
+
+  .button-tertiary {
+    @apply bg-transparent border-0 hover:text-tertiary-hover focus:outline-tertiary-focus focus:outline-dotted focus:outline-2 active:text-tertiary-active;
+  }
+
+  .button-icon path {
+    stroke: currentColor;
   }
 }
