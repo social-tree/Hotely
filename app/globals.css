@@ -3,23 +3,29 @@
 @tailwind utilities;
 
 @layer components {
-  .button {
-    @apply flex gap-1 items-center justify-center font-medium text-blackish-green rounded-button-radius whitespace-nowrap focus:outline-none transition-colors duration-300 ease-in-out disabled:text-text-disabled disabled:pointer-events-none;
-  }
+	.button {
+		@apply flex gap-1 items-center justify-center font-medium text-blackish-green rounded-button-radius whitespace-nowrap focus:outline-none transition-colors duration-300 ease-in-out disabled:text-text-disabled disabled:pointer-events-none;
+	}
 
-  .button-primary {
-    @apply button bg-mint-green hover:bg-primary-hover focus:bg-primary-focus focus:outline-dashed focus:outline-primary-focus focus:outline-1 focus:outline-offset-2 active:bg-primary-active disabled:bg-primary-disabled;
-  }
+	.button-primary {
+		@apply button bg-mint-green hover:bg-primary-hover focus:bg-primary-focus focus:outline-dashed focus:outline-primary-focus focus:outline-1 focus:outline-offset-2 active:bg-primary-active disabled:bg-primary-disabled;
+	}
 
-  .button-secondary {
-    @apply button border border-mint-green bg-transparent hover:border-secondary-hover focus:border-secondary-focus focus:border-2 active:border-blackish-green disabled:border-secondary-disabled;
-  }
+	.button-secondary {
+		@apply button border border-mint-green bg-transparent hover:border-secondary-hover focus:border-secondary-focus focus:border-2 active:border-blackish-green disabled:border-secondary-disabled;
+	}
 
-  .button-tertiary {
-    @apply bg-transparent border-0 hover:text-tertiary-hover focus:outline-tertiary-focus focus:outline-dotted focus:outline-2 active:text-tertiary-active;
-  }
+	.button-tertiary {
+		@apply bg-transparent border-0 hover:text-tertiary-hover focus:outline-tertiary-focus focus:outline-dotted focus:outline-2 active:text-tertiary-active;
+	}
 
-  .button-icon path {
-    stroke: currentColor;
-  }
+	.button-icon path {
+		stroke: currentColor;
+	}
+}
+
+@layer base {
+	body {
+		@apply font-primary;
+	}
 }
