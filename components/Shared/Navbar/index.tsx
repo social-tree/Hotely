@@ -1,9 +1,9 @@
-import Logo from "@/assets/svg/logo.svg";
+import Logo from "@/public/svgs/logo.svg";
 import Button from "../Button";
 
 const Navbar = () => {
   return (
-    <header className="py-7 flex flex-row justify-center shadow-lg">
+    <header className="py-7 px-20 flex flex-row justify-center shadow-lg">
       <nav className="flex max-w-screen-xl justify-between w-full">
         <Logo />
         <ul className="flex gap-8">
