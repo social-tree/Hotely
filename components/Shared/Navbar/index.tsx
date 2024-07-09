@@ -1,4 +1,4 @@
-import Logo from "@/public/svgs/logo.svg";
+import { default as Logo } from "@/public/svgs/logo.svg";
 import Button from "../Button";
 
 const Navbar = () => {
