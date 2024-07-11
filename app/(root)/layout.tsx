@@ -1,41 +1,42 @@
-import { Montserrat, Gothic_A1 } from "next/font/google";
-import "../globals.css";
-import { PropsWithChildren } from "react";
-import { Metadata } from "next";
-import { default as Navbar } from "@/components/Shared/Navbar";
+import { Montserrat, Gothic_A1 } from 'next/font/google'
+import '../globals.css'
+import { PropsWithChildren } from 'react'
+import { Metadata } from 'next'
+import { Navbar, Footer } from '@/components'
 
 const defaultUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "http://localhost:3000";
+	? `https://${process.env.VERCEL_URL}`
+	: 'http://localhost:3000'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(defaultUrl),
-  title: {
-    template: "Hotely - %s",
-    default: "Hotely",
-  },
-  description:
-    "Discover and explore the best hotels around the world with Hotely. View detailed information, compare amenities, and find the perfect stay for your next trip.",
-};
-
-const montserrat = Montserrat({ subsets: ["latin"] });
-const gothic_A1 = Gothic_A1({
-  weight: ["700", "600", "500", "400"],
-  subsets: ["latin"],
-});
-
-function RootLayout({ children }: PropsWithChildren) {
-  return (
-    <html
-      lang="en"
-      className={`${montserrat.className} ${gothic_A1.className}`}
-    >
-      <body>
-        <Navbar />
-        <main>{children}</main>
-      </body>
-    </html>
-  );
+	metadataBase: new URL(defaultUrl),
+	title: {
+		template: 'Hotely - %s',
+		default: 'Hotely'
+	},
+	description:
+		'Discover and explore the best hotels around the world with Hotely. View detailed information, compare amenities, and find the perfect stay for your next trip.'
 }
 
-export default RootLayout;
+const montserrat = Montserrat({ subsets: ['latin'] })
+const gothic_A1 = Gothic_A1({
+	weight: ['700', '600', '500', '400'],
+	subsets: ['latin']
+})
+
+function RootLayout({ children }: PropsWithChildren) {
+	return (
+		<html
+			lang='en'
+			className={`${montserrat.className} ${gothic_A1.className}`}
+		>
+			<body className='min-h-screen'>
+				<Navbar />
+				<main>{children}</main>
+				<Footer />
+			</body>
+		</html>
+	)
+}
+
+export default RootLayout
